@@ -6,7 +6,7 @@
  * <img src="./doc-files/Controllers.gif" alt="Entidades Magic Library" height="50%" width="100%"/>
  * 
  * 
- * @author Isabel Román, para Ingeniería del software
+ * @author Isabel Romï¿½n, para Ingenierï¿½a del software
  * @version 0.0
  * 
  * 
