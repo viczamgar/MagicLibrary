@@ -37,7 +37,7 @@ public class MagicLibrary {
 	 */
 	public static void main(String[] args) {
 	
-		log.info("Nueva Traza");
+		
 		log.info("Nueva Traza 3");
 		
 		log.info("Arranco la aplicaci�n y creo el controlador para manejar entidades desde la interfaz");
