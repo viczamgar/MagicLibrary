@@ -38,4 +38,6 @@ build
 bin
 
 # Ignora configuración del proyecto eclipse
-
+.project
+.settings
+.classpath
