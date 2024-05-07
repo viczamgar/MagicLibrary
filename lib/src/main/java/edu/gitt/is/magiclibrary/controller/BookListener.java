@@ -17,8 +17,8 @@ import edu.gitt.is.magiclibrary.view.BookDetails;
 import edu.gitt.is.magiclibrary.view.MLView;
 
 /**
- * <p>Controlador específico para las vistas de entidades de tipo Libro</p>
- * @author Isabel Román
+ * <p>Controlador especï¿½fico para las vistas de entidades de tipo Libro</p>
+ * @author Isabel Romï¿½n
  *
  */
 public class BookListener extends CrudListener<Book> {
@@ -27,7 +27,7 @@ public class BookListener extends CrudListener<Book> {
 
 	@Override
 	protected void search() {
-		log.fine("Entrando en el método search");
+		log.fine("Entrando en el mï¿½todo search");
 		String isbn=view.getAttributeAsString("isbn");
 		
 		if((!isbn.isEmpty()) && (!isbn.contentEquals("*"))) {
@@ -37,6 +37,7 @@ public class BookListener extends CrudListener<Book> {
 				log.finest("Libro encontrado");
 				MLView.getFrameManager().discard(view);
 				setView(recuperado.get());
+				System.out.println("HOLA");
 			
 			}else {
 				log.info("Libro no encontrado");
@@ -53,10 +54,10 @@ public class BookListener extends CrudListener<Book> {
 		
 	}
 	/**
-	 * Responde a los cambios en la lista de múltiples libros 
+	 * Responde a los cambios en la lista de mï¿½ltiples libros 
 	 */
 	public void valueChanged(ListSelectionEvent e) {
-		log.info("Cambia la selección en la lista");
+		log.info("Cambia la selecciï¿½n en la lista");
 		
 		((BookDetails) view).setEntity((Book)view.getSelectedValue());
     } 
@@ -81,18 +82,18 @@ public class BookListener extends CrudListener<Book> {
 
 	@Override
 	protected void save() {
-		log.finest("Entrando en método save");
+		log.finest("Entrando en mï¿½todo save");
 		entity=((BookDetails) view).getBook();
 		log.info("Voy a guardar la entidad "+entity);
 		((JpaBookDao) entityDao).save((Book) entity);
 		
 	}
 	/**
-	 * Establece la vista de libro vacía para buscar un libro, sólo habilita la introducción del isbn, en esa versión sólo busca por isbn o todos los libros
+	 * Establece la vista de libro vacï¿½a para buscar un libro, sï¿½lo habilita la introducciï¿½n del isbn, en esa versiï¿½n sï¿½lo busca por isbn o todos los libros
 	 */
 	protected void setSearchView() {	
 		log.finest("Entrando en setSearchView");
-		log.info("Estableciendo vista de libro vacía para buscar por isbn");
+		log.info("Estableciendo vista de libro vacï¿½a para buscar por isbn");
 		setSearchView("isbn");
 	
 	}
